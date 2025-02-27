@@ -12,6 +12,7 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 <body>
     
@@ -76,34 +77,66 @@
 
     <!-- Sección 2: Lo que hacemos por vos -->
     <section class="servicios">
-        <h2>Lo que hacemos por vos</h2>
-        <img src="img/Group 36.png" alt="" class="gift-icon">
-        <div class="card"> 
-            <h3>Regalos Personalizados</h3>
-            <p>Sorprende con regalos únicos e impresos en 3D. Diseños personalizados para cualquier ocasión, hechos a medida con el máximo detalle.</p>
+        <h2 class="servicios-title">Lo que hacemos por vos</h2>
+        
+        <!-- Iconos interactivos -->
+        <img src="img/Group 36.png" alt="" class="gift-icon" data-target="gift-card">
+        <div class="servicios-container">
+          <img src="img/Group 31.png" alt="" class="paint-icon" data-target="design-card">
+          
+          <!-- Tarjeta por defecto -->
+          <div id="default-card" class="card">
+              <h3>Regalos Personalizados</h3>
+              <p class="p-servicios">Sorprende con regalos únicos e impresos en 3D. Diseños personalizados para cualquier ocasión, hechos a medida con el máximo detalle.</p>
+          </div>
+          
+          <!-- Tarjetas adicionales (inicialmente ocultas) -->
+          <div id="gift-card" class="card">
+              <h3>Regalos Personalizados</h3>
+              <p class="p-servicios">Sorprende con regalos únicos e impresos en 3D. Diseños personalizados para cualquier ocasión, hechos a medida con el máximo detalle.</p>
+          </div>
+          
+          <div id="design-card" class="card">
+              <h3>Diseño Creativo</h3>
+              <p class="p-servicios">Nuestro equipo de diseñadores trabaja a tu lado para crear exactamente lo que imaginas. Desde bocetos iniciales hasta el producto final, cuidamos cada detalle.</p>
+          </div>
+          
+          <div id="business-card" class="card">
+              <h3>Soluciones Empresariales</h3>
+              <p class="p-servicios">Merchandising corporativo, regalos para clientes y empleados, trofeos personalizados y más. Lleva tu marca al siguiente nivel con productos en 3D.</p>
+          </div>
+          
+          <div id="service-card" class="card">
+              <h3>Reparaciones/Repuestos</h3>
+              <p class="p-servicios">Te ofrecemos nuestro servicio personalizado de diseño y fabricación de repuestos, herramientas o elementos que necesites, ahorrándote en tu prespuesto</p>
+          </div>
+          
+          <img src="img/Group 32.png" alt="" class="business-icon" data-target="business-card">
         </div>
-        <img src="img/Group 31.png" alt="" class="paint-icon">
-        <img src="img/Group 32.png" alt="" class="business-icon">
-        <img src="img/Group 33.png" alt="" class="tools-icon">
+        <img src="img/Group 33.png" alt="" class="tools-icon" data-target="service-card">
     </section>
 
     <!-- Sección 3: Proceso de Trabajo -->
     <section class="proceso">
-        <h2>Así de fácil es trabajar con nosotros!</h2>
+        <h2 class="proceso-title">Así de fácil es trabajar con nosotros!</h2>
         <div class="steps">
+          
             <!-- Línea de tiempo -->
-             <img src="img/Group 37.png" alt="  timeline" class="timeline">
+             <img src="img/Group 362.png" alt="  timeline" class="timeline">
             <!-- Acá irían los pasos del proceso -->
-            <p>Nos contás tu idea o necesidad</p>
-            <p>Te enviamos una cotización personalizada</p>
-            <p>Confirmás y producimos tu diseño en 3D</p>
-            <p>Te lo enviamos a casa</p>
+            <p class="p-proceso p-proceso1">Nos contás tu idea o necesidad</p>
+            <p class="p-proceso p-proceso2">Te enviamos una cotización personalizada</p>
+            <p class="p-proceso p-proceso3">Confirmás y producimos tu diseño en 3D</p>
+            <p class="p-proceso p-proceso4">Te lo enviamos a domicilio</p>
         </div>
     </section>
 
     <!-- Sección 4: Nuestros Trabajos -->
     <section class="galeria">
-        <h2>Nuestros Trabajos</h2>
+        <h2 class="galeria-title">Nuestros Trabajos</h2>
+        <h3 class="galeria-subtitle">Hacé click para ver nuestros diseños en 3D</h3>
+        <div class="models-container">
+          
             <model-viewer src="3D Objects/untitled.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
                 <div class="progress-bar hide" slot="progress-bar">
                     <div class="update-bar"></div>
@@ -120,6 +153,8 @@
                     View in your space
                 </button>
             </model-viewer>
+          
+          
             <model-viewer src="3D Objects/auris.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
                 <div class="progress-bar hide" slot="progress-bar">
                     <div class="update-bar"></div>
@@ -136,24 +171,27 @@
                     View in your space
                 </button>
             </model-viewer>
+          
+        </div>
     </section>
 
     <!-- Sección 5: Testimonios -->
     <section class="testimonios">
-        <h2>Nuestros Clientes</h2>
+        <h2 class="proceso-title">Nuestros Clientes</h2>
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="d-flex w-100">
                     <div class="client-card">
                         <p class="nombre-cliente">Benicio Rodríguez</p>
-                        <img src="img/Group 15.png" alt="" class="glass_black">
-                        <p>“Excelente servicio, compraría de vuelta siempre que lo necesite”</p>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <p class="reseña">"Excelente servicio, compraría de vuelta siempre que lo necesite"</p>
+                        <div class="stars-container">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
                         <!-- Acá van los testimonios en carrusel -->
                     </div>
                 </div>
@@ -161,14 +199,15 @@
               <div class="carousel-item">
                 <div class="d-flex w-100">
                     <div class="client-card">
-                        <p class="nombre-cliente">Benicio Rodríguez</p>
-                        <img src="img/Group 15.png" alt="" class="glass_black">
-                        <p>“Excelente servicio, compraría de vuelta siempre que lo necesite”</p>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <p class="nombre-cliente">Mateo Venezia</p>
+                        <p class="reseña">"Una presentación espectacular, toda una experiencia"</p>
+                        <div class="stars-container">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
                         <!-- Acá van los testimonios en carrusel -->
                     </div>
                 </div>
@@ -176,14 +215,15 @@
               <div class="carousel-item">
                 <div class="d-flex w-100">
                     <div class="client-card">
-                        <p class="nombre-cliente">Benicio Rodríguez</p>
-                        <img src="img/Group 15.png" alt="" class="glass_black">
-                        <p>“Excelente servicio, compraría de vuelta siempre que lo necesite”</p>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <p class="nombre-cliente">Eduardo José</p>
+                        <p class="reseña">"Un espectáculo sus productos, un servicio excepcional"</p>
+                        <div class="stars-container">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
                         <!-- Acá van los testimonios en carrusel -->
                     </div>
                 </div>
@@ -202,82 +242,163 @@
 
     <!-- Sección 6: FAQs -->
     <section class="faq">
-        <h2>Resolvemos tus dudas</h2>
-        <p class="d-inline-flex gap-1">
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
-                ¿Cuánto tiempo tarda imprimir?
-            </a>
-          </p>
-          <div class="collapse" id="collapseExample1">
-            <div class="card card-body">
-              Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-            </div>
+      <h2 class="servicios-title">Resolvemos tus dudas</h2>
+      <div class="questions-container">
+          <div class="faq-item">
+              <button class="faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                  ¿Cuánto tiempo tarda imprimir?
+              </button>
+              <div class="collapse" id="collapse1">
+                  <div class="answer-card">
+                      El tiempo de impresión depende del tamaño y la complejidad del diseño. Generalmente, para piezas pequeñas puede tomar entre 2-4 horas, mientras que proyectos más complejos pueden llevar entre 8-24 horas. Te informaremos del tiempo estimado en tu cotización.
+                  </div>
+              </div>
           </div>
-        <p class="d-inline-flex gap-1">
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
-                ¿Cuánto tiempo tarda imprimir?
-            </a>
-          </p>
-          <div class="collapse" id="collapseExample2">
-            <div class="card card-body">
-              Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-            </div>
+  
+          <div class="faq-item">
+              <button class="faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                  ¿Qué materiales utilizan?
+              </button>
+              <div class="collapse" id="collapse2">
+                  <div class="answer-card">
+                      Trabajamos principalmente con filamentos PLA, PETG y ABS. El PLA es biodegradable y perfecto para uso decorativo, el PETG ofrece mayor resistencia, y el ABS es ideal para piezas que requieren durabilidad extrema o estarán expuestas al calor.
+                  </div>
+              </div>
           </div>
-        <p class="d-inline-flex gap-1">
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                ¿Cuánto tiempo tarda imprimir?
-            </a>
-          </p>
-          <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-              Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-            </div>
+  
+          <div class="faq-item">
+              <button class="faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                  ¿Cuál es el tamaño máximo de impresión?
+              </button>
+              <div class="collapse" id="collapse3">
+                  <div class="answer-card">
+                      Nuestras impresoras pueden fabricar piezas de hasta 25x25x25 cm. Para proyectos más grandes, podemos dividir el modelo en secciones y ensamblarlas posteriormente, garantizando acabados profesionales.
+                  </div>
+              </div>
           </div>
-        <p class="d-inline-flex gap-1">
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
-                ¿Cuánto tiempo tarda imprimir?
-            </a>
-          </p>
-          <div class="collapse" id="collapseExample3">
-            <div class="card card-body">
-              Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-            </div>
+  
+          <div class="faq-item">
+              <button class="faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                  ¿Realizan envíos a todo el país?
+              </button>
+              <div class="collapse" id="collapse4">
+                  <div class="answer-card">
+                      Sí, realizamos envíos a todo Argentina. En Rosario ofrecemos entrega sin costo adicional, y para el resto del país trabajamos con servicios de mensajería confiables. El costo de envío se calcula según la distancia y el tamaño del paquete.
+                  </div>
+              </div>
           </div>
-        <p class="d-inline-flex gap-1">
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
-                ¿Cuánto tiempo tarda imprimir?
-            </a>
-          </p>
-          <div class="collapse" id="collapseExample4">
-            <div class="card card-body">
-              Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-            </div>
+  
+          <div class="faq-item">
+              <button class="faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                  ¿Cómo cuido mis productos impresos en 3D?
+              </button>
+              <div class="collapse" id="collapse5">
+                  <div class="answer-card">
+                      Para mantener tus piezas en buen estado, evita exponerlas a altas temperaturas o luz solar directa prolongada. Límpialas con un paño húmedo sin productos químicos agresivos. Para piezas funcionales, lubrica las partes móviles periódicamente según el uso.
+                  </div>
+              </div>
           </div>
+      </div>
+            
+      <div class="faq-question-form">
           <input type="text" placeholder="Realizar Pregunta">
-          <button type="submit">Enviar</button>
-    </section>
+          <button type="submit" class="submit-btn">Enviar</button>
+      </div>
+  </section>
 
     <!-- Sección 7: Contacto -->
     <section class="contacto">
-        <h2>Contactate</h2>
-        <i class="fa fa-clock" aria-hidden="true"></i>
-        <p>Respuesta en 12 horas</p>
-        <form>
+        
+       <div class="contact-desc">
+        <img src="img/mingcute_time-line.png" alt="">
+        <p class="p-contact">Respuesta en 12 horas</p>
+       </div>
+        <div class="contact-card">
+          <h2 class="servicios-title">Contactate</h2>
+        <form class="contact">
             <input type="text" placeholder="Nombre">
             <input type="email" placeholder="Correo electrónico">
             <textarea placeholder="Mensaje"></textarea>
-            <button type="submit">Enviar</button>
+            <button type="submit" class="form-btn">Enviar</button>
         </form>
-        <i class="fa fa-handshake" aria-hidden="true"></i>
-        <p>Cotizá sin compromiso</p>
+        </div>
+        <div class="contact-desc">
+          <img src="img/Vector.png" alt="">
+          <p class="p-contact">Cotizá sin compromiso</p>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>Rosario, Santa Fe, Argentina</p>
-        <p>aymstudio3d@gmail.com</p>
-        <p>+54 9 341 308 4113</p>
+      <h2 class="servicios-title">Llegó el momento de ver tus sueños impresos en 3D</h2>
+        <div class="ps-container">
+          <div class="ps-subcontainer1">
+            <div class="footer-p-container">
+              <img src="img/mdi_location.png" alt="">
+              <p class="p-footer">Rosario, Santa Fe, Argentina</p>
+            </div>
+            <div class="footer-p-container">
+              <img src="img/material-symbols_mail.png" alt="">
+              <p class="p-footer">aymstudio3d@gmail.com</p>
+            </div>
+            <div class="footer-p-container">
+              <i class="fa-solid fa-phone"></i>
+              <p class="p-footer">+54 9 341 308 4113</p>
+            </div>
+          </div>
+          <div class="ps-subcontainer2">
+            <a href="#"><p class="p-footer">Inicio</p></a>
+            <a href="#"><p class="p-footer">Nuestros Servicios</p></a>
+            <a href="#"><p class="p-footer">Cómo Funciona</p></a>
+            <a href="#"><p class="p-footer">Nuestros Trabajos</p></a>
+          </div>  
+          
+        </div>
         <button>Imprimir mi idea</button>
     </footer>
+
+    <!-- Script para la funcionalidad interactiva de las tarjetas -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Referencia a todos los iconos y tarjetas
+            const icons = document.querySelectorAll('.gift-icon, .paint-icon, .business-icon, .tools-icon');
+            const cards = document.querySelectorAll('.card');
+            const defaultCard = document.getElementById('default-card');
+            
+            // Animación inicial del icono de regalo
+            setTimeout(() => {
+                document.querySelector('.gift-icon').style.animation = 'pulseAttention 2s infinite';
+            }, 1000);
+            
+            // Función para mostrar la tarjeta correspondiente
+            function showCard(cardId) {
+                // Ocultar todas las tarjetas
+                cards.forEach(card => {
+                    card.style.display = 'none';
+                    card.style.animation = '';
+                });
+                
+                // Mostrar la tarjeta seleccionada con animación
+                const targetCard = document.getElementById(cardId);
+                if (targetCard) {
+                    targetCard.style.display = 'block';
+                    targetCard.style.animation = 'fadeIn 0.8s forwards';
+                }
+            }
+            
+            // Eventos para cada icono
+            icons.forEach(icon => {
+                icon.addEventListener('mouseenter', function() {
+                    const targetCardId = this.getAttribute('data-target');
+                    showCard(targetCardId);
+                });
+                
+                icon.addEventListener('mouseleave', function() {
+                    showCard('default-card');
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
