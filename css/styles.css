@@ -617,7 +617,7 @@ input::placeholder{
 /* Footer */
 
 footer{
-    padding: 20px;
+    padding: 20px 50px;
     display: flex;
     flex-direction: column;
 }
@@ -632,6 +632,8 @@ footer h2.servicios-title{
 .p-footer{
     font-size: 20px;
     font-weight: 600;
+    max-width: 100%;
+    margin: 0;
 }
 
 .ps-container{
@@ -643,7 +645,9 @@ footer h2.servicios-title{
 .footer-p-container{
     display: flex;
     flex-direction: row;
-    gap: 1em;
+    align-items: center;
+    gap: 2em;
+    margin: 20px 0;
 }
 
 .footer-p-container img{
@@ -654,6 +658,39 @@ footer h2.servicios-title{
     margin-right: auto;
 }
 
-i.fa-solid.fa-phone::before{
-    width: 50px;
+.f-icon{
+    transform: scale(2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ps-subcontainer2 a{
+    text-decoration: none;
+    color: #333;
+}
+
+.action-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.social-media{
+    display: flex;
+    gap: 3em;
+    margin-top: 20px;
+}
+
+.social-media a{
+    text-decoration: none;
+    color: #333;
+}
+
+.social-media a i{
+    transform: scale(2);
+}
+
+footer .form-btn{
+    width: 30%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.50);
 }
