@@ -929,7 +929,7 @@ footer .form-btn{
     }
     
     .client-card {
-        width: 100%;
+        width: 75%;
         margin: 40px 0;
         padding: 20px 0;
     }
@@ -943,12 +943,7 @@ footer .form-btn{
         max-width: 90%;
     }
 
-    .carousel-control-next-icon{
-        display: none;
-    }
-    .carousel-control-prev-icon{
-        display: none;
-    }
+    
     
     /* FAQ Section */
     .faq {
