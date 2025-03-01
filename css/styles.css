@@ -77,17 +77,16 @@ button{
 
 /* Hero Section */
 h1{
-   text-align: center;
+   text-align: start;
    color: #fff;
    font-weight: 900;
    text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.78);
    font-size: 90px;
    width: 100%;
-   margin-top: 100px
 }
 
 .personalizada{
-    text-align: center;
+    text-align: start;
     color: #fff;
     font-weight: 900;
     text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.78);
@@ -95,7 +94,8 @@ h1{
     font-size: 70px;
 }
 .subtitle{
-    text-align: center;
+    text-align: start;
+    max-width: 75%;
     font-weight: 700;
     color: #fff;
     text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.78);
@@ -112,10 +112,20 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 100px;
     width: 100%;
     
 }
+
+.hero-body .contact-card{
+    padding-bottom: 0px;
+    padding-top: 10px;
+}
+
+.hero-body .contact-card h2{
+    display: none;
+}
+
 
 .hero-text{
     display: flex;
@@ -300,22 +310,22 @@ h3{
 }
 
 .p-proceso1{
-    bottom: -1420px;
+    bottom: -1570px;
     left: 20px;
     max-width: 30%;
 }
 .p-proceso2{
-    bottom: -1100px;
+    bottom: -1250px;
     left: 300px;
     max-width: 30%;
 }
 .p-proceso3{
     max-width: 30%;
-    bottom: -1420px;
+    bottom: -1570px;
     left: 580px;
 }
 .p-proceso4{
-    bottom: -1100px;
+    bottom: -1250px;
     left: 880px;
 }
 
@@ -699,4 +709,321 @@ footer h2.servicios-title{
 footer .form-btn{
     width: 30%;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.50);
+}
+
+/* Mobile Responsive Design */
+@media only screen and (max-width: 767px) {
+    /* General adjustments */
+    body {
+        overflow-x: hidden;
+    }
+    
+    h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .personalizada {
+        font-size: 35px;
+        text-align: center;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+        max-width: 90%;
+        text-align: center;
+        margin-inline: auto;
+    }
+    
+    h2.servicios-title, h2.proceso-title, h2.galeria-title {
+        font-size: 30px;
+        max-width: 100%;
+    }
+    
+    h3 {
+        font-size: 28px;
+    }
+    
+    /* Navbar */
+    .navbar-container {
+        flex-direction: column;
+        padding: 15px 0;
+        align-items: flex-start;
+    }
+    
+    .navbar-container.scroll {
+        padding: 10px 0;
+    }
+    
+    .logo {
+        width: 15%;
+        margin-left: 20px;
+    }
+    
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        padding: 15px 0;
+        background: rgba(26, 26, 29, 0.8);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+    
+    .navbar ul.active {
+        display: flex;
+    }
+    
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .navbar ul li a {
+        font-size: 18px;
+        display: block;
+        padding: 10px 0;
+    }
+    
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    .hamburger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .nav-cta {
+        display: none;
+    }
+    
+    /* Hero Section */
+    .hero-body {
+        flex-direction: column;
+        margin-top: 70px;
+        padding: 0 20px;
+    }
+    
+    .hero-body .contact-card {
+        display: none; /* Removing form from hero as requested */
+    }
+    
+    .hero-text {
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    
+    .cta-hero {
+        font-size: 18px;
+        padding: 8px 25px;
+        margin-top: 30px;
+    }
+    
+    /* Removing Servicios section */
+    .servicios {
+        display: none;
+    }
+    
+    /* Proceso Section */
+    .proceso {
+        display: none;
+    }
+    
+    .timeline {
+        display: none; /* Removing horizontal timeline to be replaced by vertical image */
+    }
+    
+    .steps {
+        position: relative;
+        height: 600px; /* Space for vertical timeline image */
+        margin: 40px 0;
+    }
+    
+    /* Vertical positioning for p-proceso tags */
+    .p-proceso {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .p-proceso1 {
+        top: 0;
+        left: 50%;
+        max-width: 80%;
+        bottom: auto;
+    }
+    
+    .p-proceso2 {
+        top: 150px;
+        left: 50%;
+        max-width: 80%;
+        bottom: auto;
+    }
+    
+    .p-proceso3 {
+        top: 300px;
+        left: 50%;
+        max-width: 80%;
+        bottom: auto;
+    }
+    
+    .p-proceso4 {
+        top: 450px;
+        left: 50%;
+        max-width: 80%;
+        bottom: auto;
+    }
+    
+    /* Galeria Section */
+    .galeria {
+        padding: 30px 20px;
+    }
+    
+    .galeria-subtitle {
+        font-size: 20px;
+    }
+    
+    .models-container {
+        flex-direction: column;
+        max-height: unset;
+        margin: 40px 0;
+        gap: 30px;
+    }
+    
+    model-viewer {
+        height: 300px;
+    }
+    
+    /* Testimonios Section */
+    .testimonios {
+        padding: 30px 20px;
+    }
+    
+    .client-card {
+        width: 100%;
+        margin: 40px 0;
+        padding: 20px 0;
+    }
+    
+    .nombre-cliente {
+        font-size: 14px;
+    }
+    
+    .reseña {
+        font-size: 18px;
+        max-width: 90%;
+    }
+
+    .carousel-control-next-icon{
+        display: none;
+    }
+    .carousel-control-prev-icon{
+        display: none;
+    }
+    
+    /* FAQ Section */
+    .faq {
+        padding: 30px 20px;
+    }
+    
+    .questions-container {
+        width: 100%;
+    }
+    
+    .faq-btn {
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+    
+    .answer-card {
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .faq-question-form {
+        width: 100%;
+    }
+    
+    /* Contact Section */
+    .contacto {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 0;
+    }
+    
+    .contact-desc {
+        display: none; /* Removing descriptive sections */
+    }
+    
+    .contact-card {
+        width: 100%;
+        padding: 30px 15px;
+    }
+    
+    input, textarea {
+        width: 100%;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 30px 20px;
+    }
+    
+    footer h2.servicios-title {
+        max-width: 100%;
+        font-size: 24px;
+    }
+    
+    .ps-container {
+        flex-direction: column;
+    }
+    
+    .ps-subcontainer1 {
+        margin-right: 0;
+    }
+    
+    .ps-subcontainer2 {
+        display: none; /* Removing navigation links in footer */
+    }
+    
+    .action-container {
+        justify-content: center;
+    }
+    
+    .social-media {
+        margin: 20px auto;
+    }
+    
+    footer .form-btn {
+        width: 80%;
+    }
 }
